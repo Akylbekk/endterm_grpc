@@ -1,0 +1,15 @@
+
+syntax = "proto3";
+package simple;
+// Request
+message SimpleRequest {
+string data = 1;
+}
+// Response
+message SimpleResponse {
+string data = 1;
+}
+// rpc method
+service Simple {
+  rpc  GetLine (SimpleRequest) returns (SimpleResponse);
+}
